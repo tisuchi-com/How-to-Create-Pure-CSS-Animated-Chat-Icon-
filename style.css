@@ -1,0 +1,93 @@
+/*
+
+Theme Name: Pure CSS Animatted Chat ICON;
+Author: Thouhedul Islam Suchi;
+URI: tisuchi.com;
+Publisher: http://tisuchi.com;
+
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: -webkit-linear-gradient(right, #CCC 25%, #DDD 25%, #DDD 50%, #CCC 50%, #CCC 75%, #DDD 75%);
+    background-size: 20px 20px;
+}
+
+#chat {
+    opacity: 0.5;
+}
+
+#chat .bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -200px;
+    width: 400px;
+    height: 400px;
+    background-color: #555;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,0.5) 0 10px 50px;
+}
+
+#chat .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #FFF;
+    zoom: 6;
+    -webkit-animation: 1.7s infinite linear "chat_icon_animate";
+}
+
+@-webkit-keyframes chat_icon_animate {
+    0% { -webkit-transform: rotateZ(0deg); }
+    5% { -webkit-transform: rotateZ(-5deg); }
+    15% { -webkit-transform: rotateZ(5deg); }
+    25% { -webkit-transform: rotateZ(-5deg); }
+    35% { -webkit-transform: rotateZ(5deg); }
+    45% { -webkit-transform: rotateZ(-5deg); }
+    50% { -webkit-transform: rotateZ(0deg); }
+}
+
+#chat .icon > i {
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: -2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 0 0 0 15px;
+    background: inherit;
+    -webkit-transform: rotateZ(-10deg);
+}
+
+#chat .icon > i::after {
+    position: absolute;
+    content: "";
+    left: 10px;
+    bottom: -1px;
+    width: 10px;
+    height: 20px;
+    border-radius: 0 0 0 10px;
+    background: #555;
+}
+
+#chat .icon > o {
+    position: absolute;
+    display: block;
+    left: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: inherit;
+}
